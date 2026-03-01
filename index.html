@@ -20,13 +20,21 @@ section{
 max-width:900px;
 margin:0 auto;
 padding:100px 20px;
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 h1{
 font-size:56px;
 font-weight:600;
-margin:0;
 letter-spacing:2px;
+margin:0;
 }
 
 h2{
@@ -44,6 +52,8 @@ font-weight:300;
 text-align:center;
 padding-top:140px;
 padding-bottom:140px;
+opacity:1 !important;
+transform:none !important;
 }
 
 .subtitle{
@@ -72,12 +82,6 @@ grid-template-columns:1fr;
 h1{
 font-size:42px;
 }
-}
-
-.line-art{
-margin:60px auto;
-display:block;
-max-width:200px;
 }
 
 .button{
@@ -110,25 +114,20 @@ color:#666;
 <h1>SÁCH ĐI</h1>
 <p class="subtitle">Có sách để đọc – Có ước mơ để lớn</p>
 
-<!-- Minimal line art book -->
-<svg class="line-art" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="2">
-<rect x="20" y="20" width="60" height="60"/>
-<line x1="50" y1="20" x2="50" y2="80"/>
-</svg>
-
 <a href="#thamgia" class="button">Gửi tặng hiện vật</a>
 </section>
 
 <section>
 <h2>Vì sao có “SÁCH ĐI”?</h2>
 <div class="divider"></div>
+
 <p>
 Hơn 700 học sinh tại một trường vùng còn hạn chế nguồn sách thư viện.
 Số lượng đầu sách chưa đủ phong phú để các em có nhiều lựa chọn đọc.
 </p>
+
 <p>
-“SÁCH ĐI” được hình thành với mong muốn đơn giản:
-những cuốn sách đã đọc xong sẽ tiếp tục được sử dụng,
+“SÁCH ĐI” mong những cuốn sách đã đọc xong sẽ tiếp tục được sử dụng,
 thay vì nằm yên trên kệ.
 </p>
 </section>
@@ -151,7 +150,7 @@ thay vì nằm yên trên kệ.
 <p>Kệ sách các loại</p>
 <p>Tủ sách</p>
 <p>Thùng lưu trữ</p>
-<p>Vật dụng hỗ trợ bảo quản sách</p>
+<p>Vật dụng bảo quản sách</p>
 </div>
 </div>
 </section>
@@ -160,12 +159,14 @@ thay vì nằm yên trên kệ.
 <h2>Sách sẽ đi đâu?</h2>
 <div class="divider"></div>
 
-<!-- Minimal reading figure -->
-<svg class="line-art" viewBox="0 0 120 120" fill="none" stroke="#111" stroke-width="2">
-<circle cx="60" cy="30" r="15"/>
-<line x1="60" y1="45" x2="60" y2="90"/>
-<line x1="40" y1="65" x2="80" y2="65"/>
-<rect x="45" y="65" width="30" height="20"/>
+<!-- Minh họa trẻ em đọc sách -->
+<svg viewBox="0 0 300 200" width="100%" fill="none" stroke="#111" stroke-width="2">
+<circle cx="100" cy="60" r="25"/>
+<circle cx="200" cy="60" r="25"/>
+<rect x="70" y="90" width="60" height="60"/>
+<rect x="170" y="90" width="60" height="60"/>
+<rect x="110" y="110" width="80" height="40"/>
+<line x1="150" y1="110" x2="150" y2="150"/>
 </svg>
 
 <p>• Phân loại theo độ tuổi</p>
@@ -175,23 +176,33 @@ thay vì nằm yên trên kệ.
 </section>
 
 <section id="thamgia">
-<h2>Tham gia cùng SÁCH ĐI</h2>
+<h2>Thông tin tiếp nhận</h2>
 <div class="divider"></div>
 
-<p>
-Dự án chỉ tiếp nhận hiện vật: sách và vật dụng thư viện.
-Không tiếp nhận hỗ trợ tài chính.
-</p>
+<p>Dự án chỉ tiếp nhận hiện vật: sách và vật dụng thư viện.</p>
 
-<p><strong>Người phụ trách:</strong> …</p>
-<p><strong>Email:</strong> …</p>
-<p><strong>Điện thoại:</strong> …</p>
+<p><strong>Người phụ trách:</strong> Phó hiệu trưởng Nguyễn Thị Thúy Liễu</p>
+<p><strong>Điện thoại:</strong> 0915714829</p>
+<p><strong>Địa chỉ nhận sách:</strong> Trường Tiểu học và THCS Trung Sơn, xã Bến Hải, tỉnh Quảng Trị</p>
 
 </section>
 
 <footer>
 © 2026 SÁCH ĐI – Dự án thư viện cộng đồng
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(section => {
+const rect = section.getBoundingClientRect();
+if(rect.top < window.innerHeight - 100){
+section.classList.add("visible");
+}
+});
+});
+</script>
 
 </body>
 </html>
