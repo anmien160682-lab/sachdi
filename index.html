@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SÁCH ĐI – Thư viện cộng đồng</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Be Vietnam Pro',sans-serif;
+background:#fffdf8;
+color:#333;
+line-height:1.6;
+scroll-behavior:smooth;
+}
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+h1,h2{
+text-align:center;
+}
+h1{
+font-size:52px;
+margin-bottom:10px;
+}
+h2{
+font-size:34px;
+margin-bottom:40px;
+}
+.hero{
+background:linear-gradient(135deg,#fff4e6,#ffe8cc);
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+.button{
+display:inline-block;
+padding:14px 28px;
+background:#ff7a59;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+margin-top:20px;
+transition:.3s;
+}
+.button:hover{
+background:#ff5722;
+transform:scale(1.05);
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+}
+.footer{
+background:#ffe8cc;
+text-align:center;
+padding:40px 20px;
+}
+svg{
+max-width:220px;
+display:block;
+margin:20px auto;
+}
+.book{
+position:absolute;
+width:40px;
+animation:float 6s infinite ease-in-out;
+}
+.book:nth-child(1){top:20px;left:10%;animation-delay:0s;}
+.book:nth-child(2){top:100px;right:15%;animation-delay:2s;}
+.book:nth-child(3){bottom:30px;left:20%;animation-delay:4s;}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+input,textarea{
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-family:inherit;
+}
+input[type=submit]{
+background:#2a9d8f;
+color:white;
+border:none;
+cursor:pointer;
+font-weight:600;
+}
+input[type=submit]:hover{
+background:#21867a;
+}
+.sponsor{
+background:#f1faee;
+border-radius:20px;
+padding:40px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>SÁCH ĐI</h1>
+<p><strong>Có sách để đọc – Có ước mơ để lớn</strong></p>
+
+<!-- Sách bay animation -->
+<svg class="book" viewBox="0 0 100 100">
+<rect x="20" y="20" width="60" height="60" fill="#ffb703" rx="8"/>
+</svg>
+
+<svg class="book" viewBox="0 0 100 100">
+<rect x="20" y="20" width="60" height="60" fill="#8ecae6" rx="8"/>
+</svg>
+
+<svg class="book" viewBox="0 0 100 100">
+<rect x="20" y="20" width="60" height="60" fill="#90be6d" rx="8"/>
+</svg>
+
+<a href="#thamgia" class="button">Tham gia ngay</a>
+</section>
+
+<section>
+<h2>Vì sao SÁCH ĐI?</h2>
+<p>
+Hơn 700 học sinh tại một trường vùng còn hạn chế nguồn sách.
+Thư viện chưa đủ phong phú để các em có nhiều lựa chọn đọc.
+</p>
+<p>
+Chúng tôi mong những cuốn sách đã đọc xong sẽ tiếp tục hành trình của mình.
+Sách không nằm yên. Sách sẽ đi.
+</p>
+</section>
+
+<section>
+<h2>Chúng tôi cần</h2>
+<div class="grid">
+<div class="card">
+<h3>📚 Sách</h3>
+<p>Thiếu nhi, văn học, khoa học, kỹ năng sống</p>
+<p>Tiểu học & THCS</p>
+<p>Tiếng Việt & tiếng Anh</p>
+<p>Sách cũ còn tốt hoặc mới</p>
+</div>
+
+<div class="card">
+<h3>🪑 Kệ & Tủ</h3>
+<p>Kệ sách các loại</p>
+<p>Tủ lưu trữ</p>
+<p>Thùng bảo quản</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Sách sẽ đi đâu?</h2>
+
+<!-- Nhân vật manga đọc sách -->
+<svg viewBox="0 0 200 200">
+<circle cx="100" cy="60" r="25" fill="#ffcc80"/>
+<rect x="70" y="90" width="60" height="70" fill="#8ecae6" rx="10"/>
+<rect x="85" y="110" width="30" height="30" fill="#fff" rx="5"/>
+<circle cx="90" cy="55" r="5" fill="#000"/>
+<circle cx="110" cy="55" r="5" fill="#000"/>
+</svg>
+
+<p>• Phân loại theo độ tuổi</p>
+<p>• Bổ sung cho thư viện trường</p>
+<p>• Luân chuyển sang các trường lân cận</p>
+<p>• Cập nhật minh bạch số lượng</p>
+</section>
+
+<section class="sponsor">
+<h2>Đồng hành cùng doanh nghiệp</h2>
+<p>
+Chúng tôi chào đón các đơn vị tài trợ sách, kệ sách
+hoặc hỗ trợ kinh phí mua sách mới.
+</p>
+<p>
+Logo nhà tài trợ sẽ được hiển thị tại website và trong các báo cáo hoạt động.
+</p>
+</section>
+
+<section id="thamgia">
+<h2>Gửi tặng sách</h2>
+<form>
+<input type="text" placeholder="Họ và tên" required>
+<input type="email" placeholder="Email hoặc SĐT" required>
+<textarea rows="4" placeholder="Bạn muốn tặng bao nhiêu sách hoặc vật dụng gì?"></textarea>
+<input type="submit" value="Gửi thông tin">
+</form>
+</section>
+
+<div class="footer">
+© 2026 SÁCH ĐI – Dự án thư viện cộng đồng
+</div>
+
+</body>
+</html>
+
+
